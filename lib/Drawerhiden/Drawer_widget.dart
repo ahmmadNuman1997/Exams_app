@@ -4,6 +4,7 @@ import '../The_Student/List_pages/Account_information/Mlain.dart';
 import '../The_Student/List_pages/Settings.dart';
 import '../The_Student/List_pages/Theme/theme_cubit.dart';
 import '../The_Student/List_pages/exit_button.dart';
+import '../theme/My_Home_Theme.dart';
 import '../theme/theme_manager.dart';
 import 'drawer_items.dart';
 
@@ -20,6 +21,7 @@ class DrawerWidget extends StatefulWidget {
 class _DrawerWidgetState extends State<DrawerWidget>
     with SingleTickerProviderStateMixin {
   final double runanim = 0.2;
+
 
 
   @override
@@ -141,13 +143,15 @@ class _DrawerWidgetState extends State<DrawerWidget>
     var he = MediaQuery.of(context).size.height;
 
     ThemeManager _themeManager = ThemeManager();
+
+
     return    Directionality(textDirection: TextDirection.rtl,child: Container(
       // margin: EdgeInsets.only(right: we * 0.4,),
 
       child:  Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-         
+
           Text(
             "Ahmed",
             style: GoogleFonts.lato(
@@ -164,6 +168,8 @@ class _DrawerWidgetState extends State<DrawerWidget>
                 color: Colors.white,
                 fontWeight: FontWeight.bold),
           ),
+
+
           Switch(value: _themeManager.themeMode == ThemeMode.dark, onChanged: (newValue) {
             _themeManager.toggleTheme(newValue);
           })],
@@ -171,7 +177,9 @@ class _DrawerWidgetState extends State<DrawerWidget>
 
       ),
 
+
     ),
+
 
     );
   }

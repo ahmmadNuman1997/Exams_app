@@ -28,6 +28,6 @@ class DrawerItems {
   static final Exit =
   DrawerItem(title: "خروج", icon: Icons.exit_to_app_rounded,id: 6,
   );
-
+  MyHomeScreen(),
   static final List<DrawerItem> all = [my_file, notifications,situation,Settings,language,Exit];
 }
